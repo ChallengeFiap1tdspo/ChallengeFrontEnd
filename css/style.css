@@ -34,11 +34,14 @@ img {
 .cabecalho {
     background-color: #1a4b8c;
     padding: 15px 0;
+    top: 0;
+    position: sticky;
   }
   
   .logo img {
-    height: 50px;
-  }
+    max-height: 80px;
+    width: auto;
+}
   
   .menu ul {
     display: flex;
@@ -47,21 +50,19 @@ img {
   }
   
   .menu a {
+    text-decoration: none;
     color: white;
-    
-    padding: 5px 10px;
+    font-weight: bold;
+    font-size: large;
+    padding: 0.5rem 1rem;
     border-radius: 4px;
+    transition: all 0.3s ease;
     
   }
   
   .menu a:hover, .menu a.ativo {
     background-color: #0d3a73;
+    color: white;
   }
   
-  @media (min-width: 768px) {
-    .cabecalho .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
+  
