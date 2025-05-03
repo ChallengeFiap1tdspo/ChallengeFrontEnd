@@ -64,5 +64,48 @@ img {
     background-color: #0d3a73;
     color: white;
   }
-  
-  
+  /* Conteudo Principal */
+  .principal {
+    padding: 2rem 0;
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.conteudo-principal h2 {
+    font-size: 2.2rem;
+    color: #005b96;
+    margin-bottom: 1rem;
+}
+
+.conteudo-principal p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+}
+.imagem-destaque img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+.botao1 a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #00a1e0;
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.botao1 a:hover {
+    background-color: #005b96;
+    transform: scale(1.05);
+}
