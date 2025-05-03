@@ -28,3 +28,40 @@ img {
     height: auto;
     display: block;
 }
+
+
+
+.cabecalho {
+    background-color: #1a4b8c;
+    padding: 15px 0;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .menu a {
+    color: white;
+    
+    padding: 5px 10px;
+    border-radius: 4px;
+    
+  }
+  
+  .menu a:hover, .menu a.ativo {
+    background-color: #0d3a73;
+  }
+  
+  @media (min-width: 768px) {
+    .cabecalho .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
