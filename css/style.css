@@ -55,14 +55,23 @@ body {
 
 .principal {
     padding: 32px 0;
+    position: relative; 
 }
 
 .conteudo-principal {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    justify-content: space-between; 
+    align-items: center; 
     gap: 24px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+.texto-conteudo {
+    flex: 1; 
+    text-align: left; 
+    max-width: 600px; 
 }
 
 .conteudo-principal h2 {
@@ -74,14 +83,17 @@ body {
 .conteudo-principal p {
     font-size: 20px;
     margin-bottom: 24px;
-    max-width: 800px;
+}
+
+.imagem-destaque {
+    flex: 1; 
+    text-align: right; 
 }
 
 .imagem-destaque img {
-    max-width: 100%;
+    max-width: 80%; 
     border-radius: 8px;
     border: 1px solid #e0e0e0;
-    margin-top: 24px;
 }
 
 .botao1 a {
@@ -94,7 +106,6 @@ body {
     font-weight: bold;
     font-size: 20px;
 }
-
 .passos-a-passo {
     padding: 32px 0;
     background-color: #ffffff;
