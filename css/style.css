@@ -10,10 +10,12 @@ body {
     color: #333333;
     background-color: #f8f9fa;
     font-size: 18px;
+    /* padding-top: 120px;  */
+    margin: 0;
 }
 
 .container {
-    width: 90%;
+    width: 70%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 16px;
@@ -23,14 +25,32 @@ body {
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
     padding: 16px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    
 }
+
+.cabecalho-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    gap: 30px;
+}
+
 
 .logo img {
     max-height: 80px;
     width: auto;
+    
+}
+
+.menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
 }
 
 .menu ul {
@@ -106,6 +126,7 @@ body {
     font-weight: bold;
     font-size: 20px;
 }
+
 .passos-a-passo {
     padding: 32px 0;
     background-color: #ffffff;
@@ -241,26 +262,32 @@ body {
     .cabecalho {
         padding: 8px 0;
     }
+
     .menu ul {
         flex-direction: column;
         gap: 8px;
         display: none;
     }
+
     .menu.active {
         display: flex;
     }
+
     .conteudo-principal h2 {
         font-size: 29px;
     }
+
     .passo-detalhado {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
+
     .numero-passo {
         margin-right: 0;
         margin-bottom: 16px;
     }
+
     .bloco-recurso {
         min-width: 100%;
     }
@@ -270,28 +297,37 @@ body {
     body {
         font-size: 16px;
     }
+
     .conteudo-principal h2 {
         font-size: 24px;
     }
+
     .conteudo-principal p {
         font-size: 18px;
     }
+
     .titulo-recurso {
         font-size: 24px;
     }
+
     .texto-passo h3 {
         font-size: 18px;
     }
+
     .texto-passo p {
         font-size: 18px;
     }
-    .botao1 a, .botao-recurso {
+
+    .botao1 a,
+    .botao-recurso {
         padding: 13px 19px;
         font-size: 16px;
     }
+
     .coluna-footer p {
         font-size: 18px;
     }
+
     .base-rodape {
         font-size: 18px;
     }
