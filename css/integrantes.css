@@ -20,3 +20,59 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+
+.cabecalho {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.logo:hover img {
+    transform: scale(1.05);
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #005b96;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.menu a:hover {
+    color: #003d66;
+    background-color: #e8f0fe;
+}
+
+.menu a.ativo {
+    color: #ffffff;
+    background-color: #00a1e0;
+}
