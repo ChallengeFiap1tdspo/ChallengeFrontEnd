@@ -87,3 +87,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
 }
+.passos-telemedicina {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
