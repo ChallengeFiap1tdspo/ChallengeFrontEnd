@@ -113,3 +113,102 @@ body {
     color: #ffffff;
     padding: 60px 0 30px;
 }
+@media (max-width: 992px) {
+    .container {
+        width: 85%;
+    }
+    
+    .recursos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cta-botoes {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-cta {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    
+    .cabecalho-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+    
+    .telemedicina-header h1 {
+        font-size: 2rem;
+    }
+    
+    .telemedicina-header p {
+        font-size: 1.1rem;
+    }
+    
+    .passo-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .passo-numero {
+        margin-bottom: 15px;
+    }
+    
+    .recursos-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .beneficio-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .beneficio-icon {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .telemedicina-header {
+        padding: 60px 0 40px;
+    }
+    
+    .telemedicina-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .telemedicina-header p {
+        font-size: 1rem;
+    }
+    
+    .passos-telemedicina h2,
+    .recursos-telemedicina h2,
+    .beneficios-telemedicina h2,
+    .cta-telemedicina h2 {
+        font-size: 1.5rem;
+    }
+    
+    .passo-item,
+    .recurso-box,
+    .beneficio-item {
+        padding: 20px;
+    }
+    
+    .btn-recurso,
+    .btn-cta {
+        padding: 12px 20px;
+    }
+}
