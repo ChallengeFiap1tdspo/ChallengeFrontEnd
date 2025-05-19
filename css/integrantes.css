@@ -10,66 +10,59 @@ body {
     color: #333333;
     background-color: #f8f9fa;
     font-size: 18px;
+
     margin: 0;
-    padding-top: 0;
 }
 
 .container {
-    width: 90%;
+    width: 70%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 16px;
 }
 
 .cabecalho {
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px 0;
 }
 
 .cabecalho-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 16px;
+    gap: 30px;
 }
 
 .logo img {
-    height: 60px;
+    max-height: 80px;
     width: auto;
-    transition: transform 0.3s;
 }
 
-.logo:hover img {
-    transform: scale(1.05);
+.menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
 }
 
 .menu ul {
     display: flex;
     list-style: none;
-    gap: 15px;
+    gap: 24px;
 }
 
 .menu a {
     text-decoration: none;
     color: #005b96;
     font-weight: bold;
-    font-size: 18px;
-    padding: 8px 15px;
+    font-size: 20px;
+    padding: 8px 16px;
     border-radius: 4px;
-    transition: all 0.3s;
-}
-
-.menu a:hover {
-    color: #003d66;
-    background-color: #e8f0fe;
 }
 
 .menu a.ativo {
