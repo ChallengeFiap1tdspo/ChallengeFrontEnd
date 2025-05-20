@@ -106,4 +106,22 @@ button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 91, 150, 0.3);
 }
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    h1, h2 {
+        font-size: 1.8rem;
+    }
+}
 
