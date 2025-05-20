@@ -145,3 +145,45 @@ main {
     margin-bottom: 20px;
     font-size: 1rem;
 }
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #e8f0fe;
+    transition: all 0.3s;
+    padding: 8px;
+}
+
+.social-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: filter 0.3s;
+}
+
+.social-link img {
+    max-width: 20px;
+    max-height: 20px;
+    width: auto;
+    height: auto;
+}
+
+.social-link:hover {
+    background-color: #005b96;
+    transform: scale(1.1);
+}
+
+.social-link:hover .social-icon {
+    filter: brightness(0) invert(1);
+}
