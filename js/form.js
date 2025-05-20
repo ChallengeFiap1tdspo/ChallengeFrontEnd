@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
-    
+    // Adiciona uma <div class="erro-msg"> abaixo de cada campo
     for (let campo in campos) {
         const erroDiv = document.createElement("div");
         erroDiv.className = "erro-msg";
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         campos[campo].input.parentElement.appendChild(erroDiv);
         campos[campo].erroDiv = erroDiv;
     }
-});
+
     form.addEventListener("submit", function (e) {
         let valido = true;
 
@@ -70,10 +70,31 @@ document.addEventListener("DOMContentLoaded", function () {
                 continue;
             }
 
-            erroDiv.style.display = "none";
+            erroDiv.style.display = "none"; 
         }
 
         if (!valido) {
-            e.preventDefault();
+            e.preventDefault(); 
         }
     });
+
+    
+    const enderecoInput = document.getElementById("endereco");
+    const enderecoItem = enderecoInput.parentElement;
+
+    const toggleBtn = document.createElement("button");
+    toggleBtn.type = "button";
+    toggleBtn.textContent = "Mostrar/Ocultar Endereço";
+    toggleBtn.style.marginBottom = "10px";
+    enderecoItem.parentElement.insertBefore(toggleBtn, enderecoItem);
+
+    toggleBtn.addEventListener("click", function () {
+        if (enderecoItem.style.display === "none") {
+            enderecoItem.style.display = "block";
+        } else {
+            enderecoItem.style.display = "none";
+        }
+    });
+
+    enderecoItem.style.display = "none";
+});
