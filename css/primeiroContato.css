@@ -172,3 +172,68 @@ body {
     margin-top: 30px;
     font-size: 0.9rem;
 }
+@media (max-width: 992px) {
+    .content {
+        width: 90%;
+        padding: 30px;
+    }
+    
+    .content h1 {
+        font-size: 24px;
+    }
+    
+    .content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecalho-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+    
+    .menu a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+    
+    .content {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 20px;
+    }
+    
+    .content p {
+        font-size: 15px;
+    }
+    
+    .content ol li {
+        font-size: 14px;
+    }
+    
+    .rodape .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
