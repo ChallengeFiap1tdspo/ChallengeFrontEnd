@@ -239,3 +239,46 @@ body {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.6);
 }
+@media (max-width: 768px) {
+    .cabecalho-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .logo img {
+        height: 50px;
+    }
+    
+    .faq-question {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .menu a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+    
+    .contact-promo {
+        padding: 20px;
+    }
+    
+    .contact-link {
+        padding: 10px 25px;
+    }
+}
