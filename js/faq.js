@@ -18,7 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         console.log("Pergunta clicada: ", perguntaClicada.textContent);
     }
-
+           perguntasFAQ.forEach(pergunta => {
+        pergunta.addEventListener('click', alternarResposta);
+    });
+    
 
 
 
