@@ -128,3 +128,47 @@ body {
     font-size: 16px;
     color: #555;
 }
+
+.rodape {
+    background-color: #005b96;
+    color: #ffffff;
+    padding: 60px 0 30px;
+    margin-top: 60px;
+}
+
+.rodape .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.coluna-footer {
+    margin-bottom: 20px;
+}
+
+.coluna-footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    color: #ffffff;
+}
+
+.coluna-footer h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #00a1e0;
+}
+
+.base-rodape {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
