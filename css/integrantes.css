@@ -263,3 +263,33 @@ main {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.6);
 }
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .menu a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .team-member img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .social-link {
+        width: 32px;
+        height: 32px;
+        padding: 6px;
+    }
+
+    .social-link img {
+        max-width: 18px;
+        max-height: 18px;
+    }
+
+    .project-section {
+        padding: 20px;
+    }
+}
