@@ -35,3 +35,45 @@ document.addEventListener("DOMContentLoaded", function () {
         campos[campo].erroDiv = erroDiv;
     }
 });
+    form.addEventListener("submit", function (e) {
+        let valido = true;
+
+        for (let campo in campos) {
+            const valor = campos[campo].input.value.trim();
+            const erroDiv = campos[campo].erroDiv;
+
+            if (!valor) {
+                erroDiv.textContent = campos[campo].mensagem;
+                erroDiv.style.display = "block";
+                valido = false;
+                continue;
+            }
+
+            if (campo === "cpf" && !/^\d{3}\.\d{3}\.\d{3}-\d{2}$/.test(valor)) {
+                erroDiv.textContent = campos[campo].mensagem;
+                erroDiv.style.display = "block";
+                valido = false;
+                continue;
+            }
+
+            if (campo === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor)) {
+                erroDiv.textContent = campos[campo].mensagem;
+                erroDiv.style.display = "block";
+                valido = false;
+                continue;
+            }
+
+            if (campo === "telefone" && !/^\(\d{2}\)\d{5}-\d{4}$/.test(valor)) {
+                erroDiv.textContent = campos[campo].mensagem;
+                erroDiv.style.display = "block";
+                valido = false;
+                continue;
+            }
+
+            erroDiv.style.display = "none";
+        }
+
+        if (!valido) {
+            e.preventDefault();
+        }
+    });
