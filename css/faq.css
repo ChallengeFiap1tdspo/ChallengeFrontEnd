@@ -154,3 +154,33 @@ body {
 .faq-answer li {
     margin-bottom: 8px;
 }
+.contact-promo {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #e8f0fe;
+    border-radius: 8px;
+}
+
+.contact-promo h3 {
+    color: #003d66;
+    margin-bottom: 15px;
+}
+
+.contact-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 30px;
+    background-color: #005b96;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.contact-link:hover {
+    background-color: #003d66;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
