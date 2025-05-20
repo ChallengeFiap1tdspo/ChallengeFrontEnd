@@ -61,8 +61,3 @@ label {
     font-weight: bold;
     color: #005b96;
 }
-
-.required:after {
-    content: " *";
-    color: #e74c3c;
-}
