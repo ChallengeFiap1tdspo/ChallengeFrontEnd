@@ -61,3 +61,29 @@ label {
     font-weight: bold;
     color: #005b96;
 }
+.form-item {
+    margin-bottom: 20px;
+}
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.row .form-item {
+    flex: 1;
+}
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #005b96;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 91, 150, 0.2);
+}
