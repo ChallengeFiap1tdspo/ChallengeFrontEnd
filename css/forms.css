@@ -26,3 +26,43 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s ease-in-out;
 }
+h1, h2 {
+    color: #005b96;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+fieldset {
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #005b96;
+    padding: 0 15px;
+    font-size: 1.2rem;
+    background-color: white;
+    border-radius: 30px;
+    border: 2px solid #005b96;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #005b96;
+}
+
+.required:after {
+    content: " *";
+    color: #e74c3c;
+}
