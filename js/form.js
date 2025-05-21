@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
-    // Adiciona uma <div class="erro-msg"> abaixo de cada campo
     for (let campo in campos) {
         const erroDiv = document.createElement("div");
         erroDiv.className = "erro-msg";
@@ -35,11 +34,25 @@ document.addEventListener("DOMContentLoaded", function () {
         campos[campo].erroDiv = erroDiv;
     }
 
+   
+    const formatarCPF = (cpf) => {
+        return cpf.replace(/\D/g, "")
+                  .replace(/(\d{3})(\d)/, "$1.$2")
+                  .replace(/(\d{3})(\d)/, "$1.$2")
+                  .replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+    };
+
+    const formatarTelefone = (tel) => {
+        return tel.replace(/\D/g, "")
+                  .replace(/(\d{2})(\d)/, "($1)$2")
+                  .replace(/(\d{5})(\d{4})$/, "$1-$2");
+    };
+
     form.addEventListener("submit", function (e) {
         let valido = true;
 
         for (let campo in campos) {
-            const valor = campos[campo].input.value.trim();
+            let valor = campos[campo].input.value.trim();
             const erroDiv = campos[campo].erroDiv;
 
             if (!valor) {
@@ -49,11 +62,31 @@ document.addEventListener("DOMContentLoaded", function () {
                 continue;
             }
 
-            if (campo === "cpf" && !/^\d{3}\.\d{3}\.\d{3}-\d{2}$/.test(valor)) {
-                erroDiv.textContent = campos[campo].mensagem;
-                erroDiv.style.display = "block";
-                valido = false;
-                continue;
+           
+            if (campo === "cpf") {
+                valor = valor.replace(/\D/g, "");
+                const cpfFormatado = formatarCPF(valor);
+                campos[campo].input.value = cpfFormatado;
+
+                if (!/^\d{3}\.\d{3}\.\d{3}-\d{2}$/.test(cpfFormatado)) {
+                    erroDiv.textContent = campos[campo].mensagem;
+                    erroDiv.style.display = "block";
+                    valido = false;
+                    continue;
+                }
+            }
+
+            if (campo === "telefone") {
+                valor = valor.replace(/\D/g, "");
+                const telefoneFormatado = formatarTelefone(valor);
+                campos[campo].input.value = telefoneFormatado;
+
+                if (!/^\(\d{2}\)\d{5}-\d{4}$/.test(telefoneFormatado)) {
+                    erroDiv.textContent = campos[campo].mensagem;
+                    erroDiv.style.display = "block";
+                    valido = false;
+                    continue;
+                }
             }
 
             if (campo === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor)) {
@@ -63,38 +96,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 continue;
             }
 
-            if (campo === "telefone" && !/^\(\d{2}\)\d{5}-\d{4}$/.test(valor)) {
-                erroDiv.textContent = campos[campo].mensagem;
-                erroDiv.style.display = "block";
-                valido = false;
-                continue;
-            }
-
-            erroDiv.style.display = "none"; 
+            erroDiv.style.display = "none";
         }
 
         if (!valido) {
-            e.preventDefault(); 
+            e.preventDefault();
         }
     });
-
-    
-    const enderecoInput = document.getElementById("endereco");
-    const enderecoItem = enderecoInput.parentElement;
-
-    const toggleBtn = document.createElement("button");
-    toggleBtn.type = "button";
-    toggleBtn.textContent = "Mostrar/Ocultar Endereço";
-    toggleBtn.style.marginBottom = "10px";
-    enderecoItem.parentElement.insertBefore(toggleBtn, enderecoItem);
-
-    toggleBtn.addEventListener("click", function () {
-        if (enderecoItem.style.display === "none") {
-            enderecoItem.style.display = "block";
-        } else {
-            enderecoItem.style.display = "none";
-        }
-    });
-
-    enderecoItem.style.display = "none";
 });
