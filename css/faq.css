@@ -192,7 +192,6 @@ body {
 
 .rodape .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
 }
 
@@ -217,7 +216,7 @@ body {
     font-size: 1rem;
     margin-bottom: 12px;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
+    color: #FFFFFFCC; 
 }
 
 .coluna-footer a {
@@ -234,7 +233,7 @@ body {
     grid-column: 1 / -1;
     text-align: center;
     padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+   border-top: 1px solid #FFFFFFCC;
     margin-top: 30px;
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.6);
