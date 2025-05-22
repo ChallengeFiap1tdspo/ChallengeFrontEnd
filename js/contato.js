@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  // Criação das divs de erro
+  
   for (let campo in campos) {
     const erroDiv = document.createElement("div");
     erroDiv.className = "erro-msg";
@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
       let valor = campos[campo].input.value.trim();
       const erroDiv = campos[campo].erroDiv;
       const opcional = campos[campo].opcional || false;
-
 
       if (!valor && !opcional) {
         erroDiv.textContent = campos[campo].mensagem;
@@ -89,15 +88,21 @@ document.addEventListener("DOMContentLoaded", function () {
         continue;
       }
 
-      
       erroDiv.style.display = "none";
     }
 
+    const sucessoDiv = document.getElementById("mensagemSucesso");
+
     if (valido) {
-      document.getElementById("mensagemSucesso").style.display = "block";
-      form.reset(); 
+      if (sucessoDiv) {
+        sucessoDiv.style.display = "block";
+      }
+      alert("Mensagem enviada!");
+      form.reset();
     } else {
-      document.getElementById("mensagemSucesso").style.display = "none";
+      if (sucessoDiv) {
+        sucessoDiv.style.display = "none";
+      }
     }
   });
 });
