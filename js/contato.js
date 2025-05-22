@@ -24,7 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
       mensagem: "A mensagem não pode estar vazia."
     }
   };
-   for (let campo in campos) {
+
+  // Criação das divs de erro
+  for (let campo in campos) {
     const erroDiv = document.createElement("div");
     erroDiv.className = "erro-msg";
     erroDiv.style.color = "red";
@@ -39,4 +41,63 @@ document.addEventListener("DOMContentLoaded", function () {
       .replace(/(\d{2})(\d)/, "($1)$2")
       .replace(/(\d{5})(\d{4})$/, "$1-$2");
   };
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let valido = true;
+
+    for (let campo in campos) {
+      let valor = campos[campo].input.value.trim();
+      const erroDiv = campos[campo].erroDiv;
+      const opcional = campos[campo].opcional || false;
+
+
+      if (!valor && !opcional) {
+        erroDiv.textContent = campos[campo].mensagem;
+        erroDiv.style.display = "block";
+        valido = false;
+        continue;
+      }
+
+      if (campo === "email" && valor) {
+        const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor);
+        if (!emailValido) {
+          erroDiv.textContent = campos[campo].mensagem;
+          erroDiv.style.display = "block";
+          valido = false;
+          continue;
+        }
+      }
+
+      if (campo === "telefone" && valor) {
+        valor = valor.replace(/\D/g, "");
+        const telefoneFormatado = formatarTelefone(valor);
+        campos[campo].input.value = telefoneFormatado;
+
+        if (!/^\(\d{2}\)\d{5}-\d{4}$/.test(telefoneFormatado)) {
+          erroDiv.textContent = campos[campo].mensagem;
+          erroDiv.style.display = "block";
+          valido = false;
+          continue;
+        }
+      }
+
+      if (campo === "assunto" && valor === "") {
+        erroDiv.textContent = campos[campo].mensagem;
+        erroDiv.style.display = "block";
+        valido = false;
+        continue;
+      }
+
+      
+      erroDiv.style.display = "none";
+    }
+
+    if (valido) {
+      document.getElementById("mensagemSucesso").style.display = "block";
+      form.reset(); 
+    } else {
+      document.getElementById("mensagemSucesso").style.display = "none";
+    }
+  });
 });
