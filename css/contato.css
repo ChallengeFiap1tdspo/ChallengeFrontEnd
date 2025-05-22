@@ -230,3 +230,50 @@ body {
   padding-top: 20px;
   font-size: 0.9rem;
 }
+
+@media (min-width: 768px) {
+  .cabecalho-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menu ul {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+
+  .menu a {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+
+  .contato-content {
+    flex-direction: row;
+  }
+
+  .contato-info,
+  .contato-form {
+    flex: 1;
+  }
+
+  .horarios-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 70%;
+    max-width: 1200px;
+  }
+
+  .horarios-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
