@@ -13,23 +13,26 @@ body {
     justify-content: center;
     align-items: center;
     color: #333;
-    padding: 20px;
+    padding: 15px;
     line-height: 1.6;
+    font-size: 16px; 
 }
 
 .container {
-    width: 100%;
-    max-width: 700px;
+    width: 90%;
+    max-width: 100%;
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s ease-in-out;
 }
+
 h1, h2 {
     color: #005b96;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    font-size: 1.6rem; 
 }
 
 form {
@@ -46,7 +49,7 @@ legend {
     font-weight: bold;
     color: #005b96;
     padding: 0 15px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     background-color: white;
     border-radius: 30px;
     border: 2px solid #005b96;
@@ -61,17 +64,21 @@ label {
     font-weight: bold;
     color: #005b96;
 }
+
 .form-item {
     margin-bottom: 20px;
 }
+
 .row {
     display: flex;
-    gap: 20px;
+    flex-direction: column; 
+    gap: 0;
 }
 
 .row .form-item {
-    flex: 1;
+    flex: none;
 }
+
 input, select {
     width: 100%;
     padding: 12px;
@@ -87,6 +94,7 @@ input:focus, select:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(0, 91, 150, 0.2);
 }
+
 button {
     background: linear-gradient(to right, #005b96, #003d66);
     color: white;
@@ -106,22 +114,60 @@ button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 91, 150, 0.3);
 }
-@media (max-width: 600px) {
+
+
+@media (min-width: 768px) {
     body {
-        padding: 15px;
+        padding: 20px 40px;
+        font-size: 18px;
     }
     
     .container {
-        padding: 20px;
+        width: 80%;
+        max-width: 700px;
+        padding: 30px 40px;
     }
-    
-    .row {
-        flex-direction: column;
-        gap: 0;
-    }
-    
+
     h1, h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    legend {
+        font-size: 1.3rem;
+    }
+
+    .row {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .row .form-item {
+        flex: 1;
     }
 }
 
+@media (min-width: 992px) {
+    body {
+        padding: 40px 60px;
+        font-size: 20px;
+    }
+
+    .container {
+        width: 70%;
+        max-width: 900px;
+        padding: 40px 60px;
+    }
+
+    h1, h2 {
+        font-size: 2.5rem;
+    }
+
+    legend {
+        font-size: 1.5rem;
+    }
+
+    .row {
+        gap: 30px;
+    }
+}
