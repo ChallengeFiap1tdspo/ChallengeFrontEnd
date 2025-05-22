@@ -61,3 +61,18 @@ body {
   color: #ffffff;
   background-color: #00a1e0;
 }
+.contato-header {
+  text-align: center;
+  padding: 40px 0 20px;
+}
+
+.contato-header h1 {
+  font-size: 2rem;
+  color: #005b96;
+  margin-bottom: 10px;
+}
+
+.contato-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
