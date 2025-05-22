@@ -460,100 +460,126 @@ body {
 
 @media (max-width: 992px) {
     .container {
-        width: 85%;
+        width: 90%;
     }
-    
+
+    .cabecalho-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
     .recursos-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .cta-botoes {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .btn-cta {
         width: 100%;
         max-width: 300px;
     }
-}
 
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-    
-    .cabecalho-container {
+    .beneficio-item {
         flex-direction: column;
-        gap: 20px;
+        text-align: center;
     }
-    
-    .menu ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
+
+    .beneficio-icon {
+        margin-bottom: 15px;
     }
-    
-    .telemedicina-header h1 {
-        font-size: 2rem;
-    }
-    
-    .telemedicina-header p {
-        font-size: 1.1rem;
-    }
-    
+
     .passo-item {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-    
+
     .passo-numero {
         margin-bottom: 15px;
     }
-    
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .telemedicina-header h1 {
+        font-size: 2rem;
+    }
+
+    .telemedicina-header p {
+        font-size: 1.1rem;
+    }
+
     .recursos-container {
         grid-template-columns: 1fr;
     }
-    
-    .beneficio-item {
-        flex-direction: column;
-        text-align: center;
+
+    .beneficio-text h3,
+    .recurso-text h3,
+    .passo-conteudo h3 {
+        font-size: 1.2rem;
     }
-    
-    .beneficio-icon {
-        margin-bottom: 15px;
+
+    .beneficio-text p,
+    .recurso-text p,
+    .passo-conteudo p {
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
     .telemedicina-header {
-        padding: 60px 0 40px;
+        padding: 40px 0 30px;
     }
-    
+
     .telemedicina-header h1 {
-        font-size: 1.75rem;
+        font-size: 1.6rem;
     }
-    
+
     .telemedicina-header p {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
-    
+
     .passos-telemedicina h2,
     .recursos-telemedicina h2,
     .beneficios-telemedicina h2,
     .cta-telemedicina h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
-    
+
     .passo-item,
     .recurso-box,
     .beneficio-item {
-        padding: 20px;
+        padding: 16px;
     }
-    
+
     .btn-recurso,
     .btn-cta {
-        padding: 12px 20px;
+        padding: 10px 18px;
+        font-size: 0.95rem;
+    }
+
+    .coluna-footer h3 {
+        font-size: 1.2rem;
+    }
+
+    .coluna-footer p, .coluna-footer a {
+        font-size: 0.95rem;
+    }
+
+    .base-rodape {
+        font-size: 0.8rem;
     }
 }
