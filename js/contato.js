@@ -24,4 +24,19 @@ document.addEventListener("DOMContentLoaded", function () {
       mensagem: "A mensagem não pode estar vazia."
     }
   };
+   for (let campo in campos) {
+    const erroDiv = document.createElement("div");
+    erroDiv.className = "erro-msg";
+    erroDiv.style.color = "red";
+    erroDiv.style.fontSize = "0.9em";
+    erroDiv.style.display = "none";
+    campos[campo].input.parentElement.appendChild(erroDiv);
+    campos[campo].erroDiv = erroDiv;
+  }
+
+  const formatarTelefone = (tel) => {
+    return tel.replace(/\D/g, "")
+      .replace(/(\d{2})(\d)/, "($1)$2")
+      .replace(/(\d{5})(\d{4})$/, "$1-$2");
+  };
 });
