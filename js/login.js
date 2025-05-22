@@ -11,4 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
             mensagem: "Informe uma idade válida (maior que zero)."
         }
     };
+      for (let campo in campos) {
+        const erroDiv = document.createElement("div");
+        erroDiv.className = "erro-msg";
+        erroDiv.style.color = "red";
+        erroDiv.style.fontSize = "0.9em";
+        erroDiv.style.display = "none";
+        campos[campo].input.parentElement.appendChild(erroDiv);
+        campos[campo].erroDiv = erroDiv;
+    }
 });
+
