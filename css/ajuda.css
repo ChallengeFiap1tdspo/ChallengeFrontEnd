@@ -10,8 +10,6 @@ body {
     color: #333333;
     background-color: #f8f9fa;
     font-size: 18px;
-
-    margin: 0;
 }
 
 .container {
@@ -20,6 +18,7 @@ body {
     margin: 0 auto;
     padding: 0 16px;
 }
+
 
 .cabecalho {
     background-color: #ffffff;
@@ -54,6 +53,8 @@ body {
     display: flex;
     list-style: none;
     gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .menu a {
@@ -70,7 +71,7 @@ body {
     background-color: #00a1e0;
 }
 
-
+/* Header Telemedicina */
 .telemedicina-header {
     text-align: center;
     padding: 80px 0 60px;
@@ -93,13 +94,15 @@ body {
     margin: 0 auto;
 }
 
-
+/* Passos */
 .passos-telemedicina {
     padding: 60px 0;
     background-color: #ffffff;
 }
 
-.passos-telemedicina h2 {
+.passos-telemedicina h2,
+.recursos-telemedicina h2,
+.beneficios-telemedicina h2 {
     color: #005b96;
     margin-bottom: 40px;
     font-size: 2rem;
@@ -108,8 +111,10 @@ body {
     padding-bottom: 15px;
 }
 
-.passos-telemedicina h2::after {
-   
+.passos-telemedicina h2::after,
+.recursos-telemedicina h2::after,
+.beneficios-telemedicina h2::after {
+    content: '';
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -171,26 +176,6 @@ body {
 .recursos-telemedicina {
     padding: 60px 0;
     background-color: #f8f9fa;
-}
-
-.recursos-telemedicina h2 {
-    color: #005b96;
-    margin-bottom: 40px;
-    font-size: 2rem;
-    text-align: center;
-    position: relative;
-    padding-bottom: 15px;
-}
-
-.recursos-telemedicina h2::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    width: 80px;
-    height: 3px;
-    background-color: #00a1e0;
 }
 
 .recursos-container {
@@ -257,7 +242,6 @@ body {
     border-radius: 6px;
     cursor: pointer;
     text-decoration: none;
-    display: inline-block;
     transition: all 0.3s ease;
     margin-top: 10px;
 }
@@ -272,26 +256,6 @@ body {
 .beneficios-telemedicina {
     padding: 60px 0;
     background-color: #ffffff;
-}
-
-.beneficios-telemedicina h2 {
-    color: #005b96;
-    margin-bottom: 40px;
-    font-size: 2rem;
-    text-align: center;
-    position: relative;
-    padding-bottom: 15px;
-}
-
-.beneficios-telemedicina h2::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    width: 80px;
-    height: 3px;
-    background-color: #00a1e0;
 }
 
 .beneficios-lista {
@@ -323,7 +287,6 @@ body {
     justify-content: center;
     background-color: #005b96;
     border-radius: 50%;
-    flex-shrink: 0;
 }
 
 .beneficio-icon img {
@@ -384,15 +347,15 @@ body {
     background-color: #00a1e0;
 }
 
-.btn-cta.secundario {
-    background-color: transparent;
-    border: 2px solid #ffffff;
-}
-
 .btn-cta.primario:hover {
     background-color: #0078a8;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-cta.secundario {
+    background-color: transparent;
+    border: 2px solid #ffffff;
 }
 
 .btn-cta.secundario:hover {
@@ -430,7 +393,8 @@ body {
     background-color: #00a1e0;
 }
 
-.coluna-footer p, .coluna-footer a {
+.coluna-footer p,
+.coluna-footer a {
     font-size: 1rem;
     margin-bottom: 12px;
     line-height: 1.6;
@@ -439,7 +403,6 @@ body {
 
 .coluna-footer a {
     text-decoration: none;
-    display: block;
     transition: color 0.3s ease;
 }
 
@@ -458,6 +421,7 @@ body {
 }
 
 
+
 @media (max-width: 992px) {
     .container {
         width: 90%;
@@ -465,14 +429,7 @@ body {
 
     .cabecalho-container {
         flex-direction: column;
-        align-items: center;
         gap: 20px;
-    }
-
-    .menu ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 16px;
     }
 
     .recursos-container {
@@ -489,21 +446,14 @@ body {
         max-width: 300px;
     }
 
-    .beneficio-item {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .beneficio-icon {
-        margin-bottom: 15px;
-    }
-
+    .beneficio-item,
     .passo-item {
         flex-direction: column;
-        align-items: center;
         text-align: center;
+        align-items: center;
     }
 
+    .beneficio-icon,
     .passo-numero {
         margin-bottom: 15px;
     }
@@ -575,7 +525,8 @@ body {
         font-size: 1.2rem;
     }
 
-    .coluna-footer p, .coluna-footer a {
+    .coluna-footer p,
+    .coluna-footer a {
         font-size: 0.95rem;
     }
 
