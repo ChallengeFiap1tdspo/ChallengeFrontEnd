@@ -34,32 +34,31 @@ GitHub Pages:
 
 ## 🔧 Estrutura do Projeto
 
+```
 📁 Raiz do projeto
-├── index.html # Página inicial
-├── ajuda.html # Página com vídeos tutoriais
-├── cadastro.html # Cadastro de usuário
-├── contato.html # Contatos
-├── faq.html # Perguntas frequentes
-├── integrantes.html # Sobre os desenvolvedores
-├── login.html # Login com CPF e idade
-├── primeiroContato.html # Primeiros passos do usuário
-│
-├── css/ # Arquivos de estilo
-│ ├── ajuda.css
-│ ├── contato.css
-│ ├── faq.css
-│ ├── forms.css
-│ ├── integrantes.css
-│ ├── primeiroContato.css
-│ └── style.css
-│
-├── js/ # Scripts de interação
-│ ├── cadastro.js
-│ ├── contato.js
-│ ├── faq.js
-│ └── login.js
-│
-└── img/ # Imagens utilizadas no projeto
+├── index.html              # Página inicial
+├── ajuda.html              # Página com vídeos tutoriais
+├── cadastro.html           # Cadastro de usuário
+├── contato.html            # Contatos
+├── faq.html                # Perguntas frequentes
+├── integrantes.html        # Sobre os desenvolvedores
+├── login.html              # Login com CPF e idade
+├── primeiroContato.html    # Primeiros passos do usuário
+├── css/                    # Arquivos de estilo
+│   ├── ajuda.css
+│   ├── contato.css
+│   ├── faq.css
+│   ├── forms.css
+│   ├── integrantes.css
+│   ├── primeiroContato.css
+│   └── style.css
+├── js/                     # Scripts de interação
+│   ├── cadastro.js
+│   ├── contato.js
+│   ├── faq.js
+│   └── login.js
+└── img/                    # Imagens utilizadas no projeto
+
 
 
 ---
