@@ -33,8 +33,8 @@ GitHub Pages:
 ---
 
 ## 🔧 Estrutura do Projeto
-📁 
-'''📁 Raiz do projeto
+
+📁 Raiz do projeto
 ├── index.html # Página inicial
 ├── ajuda.html # Página com vídeos tutoriais
 ├── cadastro.html # Cadastro de usuário
@@ -59,10 +59,10 @@ GitHub Pages:
 │ ├── faq.js
 │ └── login.js
 │
-├── img/ # Imagens utilizadas no projeto
+└── img/ # Imagens utilizadas no projeto
 
-'''
 
+---
 
 ## 📽️ Funcionalidades
 
