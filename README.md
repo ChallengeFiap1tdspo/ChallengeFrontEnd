@@ -12,7 +12,7 @@ Este projeto foi construído com tecnologias básicas e pode ser executado diret
 ##🔗 Clone o repositório
 
 git clone https://github.com/ChallengeFiap1tdspo/ChallengeFrontEnd.git
-Este projeto foi construído com tecnologias básicas e pode ser executado diretamente em qualquer navegador moderno. Nenhuma instalação de dependências é necessária.
+
 
 ## Acesse o projeto online
 
