@@ -43,7 +43,7 @@ GitHub Pages:
 ## 🔧 Estrutura do Projeto
 
 ```
-📁 Raiz do projeto
+📁
 ├── index.html              # Página inicial
 ├── ajuda.html              # Página com vídeos tutoriais
 ├── cadastro.html           # Cadastro de usuário
