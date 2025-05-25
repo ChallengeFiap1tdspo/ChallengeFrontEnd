@@ -9,8 +9,16 @@ Um site simples e acessível criado para facilitar o uso dos sistemas digitais p
 Este projeto foi construído com tecnologias básicas e pode ser executado diretamente em qualquer navegador moderno. Nenhuma instalação de dependências é necessária.
 
 ---
+##🔗 Clone o repositório
+Para clonar este projeto em sua máquina local, execute:
 
-## 🔗 Acesse o projeto online
+bash
+Copiar
+Editar
+git clone https://github.com/ChallengeFiap1tdspo/ChallengeFrontEnd.git
+Este projeto foi construído com tecnologias básicas e pode ser executado diretamente em qualquer navegador moderno. Nenhuma instalação de dependências é necessária.
+
+## Acesse o projeto online
 
 GitHub Pages:  
 👉 [https://challengefiap1tdspo.github.io/ChallengeFrontEnd/](https://challengefiap1tdspo.github.io/ChallengeFrontEnd/)
