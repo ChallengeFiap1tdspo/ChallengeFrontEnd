@@ -10,11 +10,7 @@ Este projeto foi construído com tecnologias básicas e pode ser executado diret
 
 ---
 ##🔗 Clone o repositório
-Para clonar este projeto em sua máquina local, execute:
 
-bash
-Copiar
-Editar
 git clone https://github.com/ChallengeFiap1tdspo/ChallengeFrontEnd.git
 Este projeto foi construído com tecnologias básicas e pode ser executado diretamente em qualquer navegador moderno. Nenhuma instalação de dependências é necessária.
 
